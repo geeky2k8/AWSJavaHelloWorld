@@ -18,7 +18,7 @@ public class S3JavaSDKExample {
 
     public static void main(String[] args)throws Exception {
 
-        demoServerSideEncryptionNotResource();
+        createAndPopulateSimpleBucket();
 
 
     }
@@ -31,8 +31,9 @@ public class S3JavaSDKExample {
 
         AmazonS3Client s3Client = new AmazonS3Client(awsCreds);
 
+        /**
         BucketUtils.deleteAllBuckets(s3Client);
-
+        **/
 
         String newBucketName = "mattua" + System.currentTimeMillis();
         s3Client.createBucket(newBucketName);
